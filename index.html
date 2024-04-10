@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>team.7</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" />
+  <body>
+    <div>
+      <h3 style="text-decoration: underline; text-underline-offset: 5px">
+        team.7 | Team members
+      </h3>
+      <div style="padding-left: 10px">
+        <li>heang lyheap</li>
+        <li>koy jamie</li>
+        <li>leap seyha</li>
+        <li>Khann bunkheang</li>
+      </div>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div.container {
+        display: flex;
+        gap: 1rem;
+      }
+      img {
+        max-width: 300px;
+        height:200px;z    
+      }
+      article {
+        max-width: 300px;
+      }
+      div.wrapper {
+        overflow: hidden;
+        position: relative;
+      }
+      div.wrapper h3 {
+        transition: all 0.2s;
+        position: absolute;
+        bottom: -100%;
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        background: rgba(205, 10, 10, 0.8);
+      }
+      div.wrapper:hover h3 {
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <article>
+        <div class="wrapper">
+          <img src="/Music Player.png" />
+          <h3>music player</h3>
+        </div>
+        <p></p>
+      </article> -->
+ 
+    </div>
+
+    <script>
+      const obj = [
+        {
+          title: "H2",
+          img: "H2.jpg",
+          des: "MY name is Seyha____________  I like H2 ❤️",
+        },
+        {
+          title: "ZX1000rr",
+          img: "Zx1000rr.jpg",
+          des: "My name is Heang Ly heap_____________ I like ZX1000rr",
+        },
+        {
+          title: "M1000rr",
+          img: "M1000rr.jpg",
+          des: "My name is Koy Jamie _______________ i like m1000RR",
+        },
+      ];
+      const container = document.querySelector("div.container");
+
+      function displayItem() {
+        container.innerHTML = obj
+          .map((item) => {
+            return `
+            <article>
+                <div class="wrapper">
+                  <img src="${item.img}" />
+                  <h3>${item.title}</h3>
+                </div>
+                <p>${item.des}</p>
+              </article>`;
+          })
+          .join("");
+      }
+      displayItem();
+    </script>
+  </body>
+</html>
